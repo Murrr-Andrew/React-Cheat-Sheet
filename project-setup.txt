@@ -2,6 +2,17 @@
 git config user.email "myemail@gmail.com"
 git config user.email
 
+=== Plugins ===
+ESLint
+Prettier - Code formatter
+vscode-styled-components
+
+=== VSC Settings ===
+auto save -> onFocusChange
+Default Formatter -> Prettier - Code formatter
+Format On Save -> Format a file on save (true)
+Eslint: Run -> onSave
+
 === Installing project ===
 npm create vite
 
