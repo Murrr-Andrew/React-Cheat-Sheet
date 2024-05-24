@@ -1,35 +1,122 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable no-unused-vars */
+
+// useState
+// import Counter from "./hookExamples/useState/Counter";
+// import Form from "./hookExamples/useState/Form";
+// import Profile from "./hookExamples/useState/Profile";
+
+// useEffect
+// import Counter from "./hookExamples/useEffect/Counter";
+// import DataFetcher from "./hookExamples/useEffect/DataFetcher";
+// import Timer from "./hookExamples/useEffect/Timer";
+// import WelcomeMessage from "./hookExamples/useEffect/WelcomeMessage";
+
+// useContent
+// import { ThemeProvider } from "./hookExamples/useContext/theme/ThemeContext";
+// import ThemeToggle from "./hookExamples/useContext/theme/ThemeToggle";
+
+// useReducer
+// import Counter from "./hookExamples/useReducer/Counter";
+
+// useRef
+// import FocusInput from "./hookExamples/useRef/FocusInput";
+// import Timer from "./hookExamples/useRef/Timer";
+
+// useParams
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Home from "./hookExamples/useParams/Home";
+// import UserProfile from "./hookExamples/useParams/UserProfile";
+
+// useSearchParams
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Home from "./hookExamples/useSearchParams/Home";
+// import Item from "./hookExamples/useSearchParams/Item";
+// import ItemList from "./hookExamples/useSearchParams/ItemList";
+
+// useNavigate
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Login from "./hookExamples/useNavigate/Login";
+// import Dashboard from "./hookExamples/useNavigate/Dashboard";
+
+// useCallback
+// import Parent from "./hookExamples/useCallback/Parent";
+
+// redux
+import { Provider } from "react-redux";
+import store from "./hookExamples/redux/store";
+import Counter from "./hookExamples/redux/Counter";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* === useState === */}
+      {/* <Counter /> */}
+      {/* <Form /> */}
+      {/* <Profile /> */}
+
+      {/* === useEffect === */}
+      {/* <Counter /> */}
+      {/* <WelcomeMessage /> */}
+      {/* <Timer /> */}
+      {/* <DataFetcher /> */}
+
+      {/* === useContent === */}
+      {/*
+        <ThemeProvider>
+          <ThemeToggle />
+        </ThemeProvider>
+      */}
+
+      {/* === useReducer === */}
+      {/* <Counter /> */}
+
+      {/* === useRef === */}
+      {/* <FocusInput /> */}
+      {/* <Timer /> */}
+
+      {/* === useParams === */}
+      {/*
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/user/:id" element={<UserProfile />} />
+          </Routes>
+        </BrowserRouter>
+      */}
+
+      {/* === useSearchParams === */}
+      {/*
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/items" element={<ItemList />} />
+            <Route path="/items/:id" element={<Item />} />
+          </Routes>
+        </BrowserRouter>
+      */}
+
+      {/* === useNavigate === */}
+      {/*
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </BrowserRouter>
+      */}
+
+      {/* === useMemo === */}
+      {/* <Products /> */}
+
+      {/* === useCallback === */}
+      {/* <Parent /> */}
+
+      {/* === redux === */}
+      <Provider store={store}>
+        <Counter />
+      </Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
